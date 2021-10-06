@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arithimetic Page</title>
+</head>
+ 
+<body>
+<h1>Ashreen Shaheen Shaik Computes</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">Enter a base </label>
+    <input type ="number" id="base" name="form1_base" min=10 max=50 step=2 value=10> <br>
+
+    <label for="form1_nick">Enter an exponent </label>
+    <input type ="text" id="exponent" name="form1_exponent" autofocus> <br>
+
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function powers(){
+    console.log("Getting form values")
+    base = document.getElementById("base").value
+    exponent = document.getElementById("exponent").value
+    var result="Powers of "+base +"are:"
+    
+    r = 1
+    out = document.getElementById("result")
+    for(i=1; i<=exponent; i++){
+        r *= base;
+        result += r + " "
+    }
+    out.innerHTML = result
+}
+</script>
+
+
+
+</body>
+</html> 
