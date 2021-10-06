@@ -35,12 +35,14 @@
         
         out = document.getElementById("result")
         if(sphrase == phrase){
+            counterP+=1;
             counterN=0 ;
         correct += 1
         out.innerHTML = "Correct Count: " + correct
         alert("Access allowed.")
     } else {
         counterN ++;
+        counterP = 0;
         wrong += 1
         out.innerHTML = "Wrong Count: " + wrong
         alert("Access denied.")
